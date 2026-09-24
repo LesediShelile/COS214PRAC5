@@ -1,15 +1,17 @@
-#include "CancelCommand.h"
-#include "IncidentResponseReceiver.h"
+#ifndef COMMAND_INVOKER_H
+#define COMMAND_INVOKER_H
+#include "Command.h"
 
-CancelCommand::CancelCommand(
-    IncidentResponseReceiver* receiver,
-    const std::string& location)
-{
-    this->receiver = receiver;
-    this->location = location;
-}
+class CommandInvoker{
+private:
+    Command* command;
 
-void CancelCommand::execute()
-{
-    receiver->cancel(location);
-}
+public:
+    CommandInvoker();
+    ~CommandInvoker();
+
+    void setCommand(Command* command);
+    void executeCommand();
+};
+
+#endif

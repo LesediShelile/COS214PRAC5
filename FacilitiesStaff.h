@@ -1,10 +1,8 @@
 #ifndef FACILITIES_STAFF_H
 #define FACILITIES_STAFF_H
-
 #include <string>
 
-class FacilitiesStaff
-{
+class FacilitiesStaff{
 public:
     void dispatch(const std::string& location);
     void evacuate(const std::string& location);

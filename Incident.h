@@ -13,8 +13,7 @@ private:
 
 
 public:
-    Incident(int id, const std::string& description,
-             const std::string& location);
+    Incident(int id, const std::string& description,const std::string& location);
 
     int getIncidentId() const;
     std::string getDescription() const;
@@ -22,7 +21,6 @@ public:
     std::string getStatus() const;
 
     void setStatus(const std::string& status);
-
     void display() const;
 
 

@@ -1,12 +1,10 @@
 #ifndef SECURITY_TEAM_H
 #define SECURITY_TEAM_H
-
 #include <string>
 
 class ResponseMediator;
 
-class SecurityTeam
-{
+class SecurityTeam{
 private:
     ResponseMediator* mediator;
 

@@ -1,6 +1,5 @@
 #ifndef RESPONSE_MEDIATOR_H
 #define RESPONSE_MEDIATOR_H
-
 #include <string>
 
 class SecurityTeam;
@@ -26,8 +25,7 @@ public:
     void sendAlert(const std::string& message);
     void cancelResponse(const std::string& location);
 
-    void notify(const std::string& sender,
-                const std::string& status);
+    void notify(const std::string& sender,const std::string& status);
 };
 
 #endif

@@ -1,12 +1,5 @@
-#ifndef COMMAND_H
-#define COMMAND_H
+#include "Command.h"
 
-class Command
+Command::~Command()
 {
-public:
-    virtual ~Command();
-
-    virtual void execute() = 0;
-};
-
-#endif
+}
