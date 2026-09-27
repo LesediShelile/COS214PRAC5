@@ -33,3 +33,8 @@ void SecurityTeam::reportStatus(const std::string& status){
         mediator->notify("SecurityTeam", status);
     }
 }
+
+void SecurityTeam::update(const std::string& status)
+{
+    std::cout << "[Security] Incident status changed to " << status << std::endl;
+}
