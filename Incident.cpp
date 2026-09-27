@@ -24,18 +24,35 @@ std::string Incident::getLocation() const{
 }
 
 std::string Incident::getStatus() const{
-    return status;
+    return status->getStatus();
 }
 
-void Incident::setStatus(const std::string& status){
-    this->status = status;
+void Incident::setStatus(IncidentState* newState){
+    delete state;
+    state = newState;
+    notifyObservers();
+}
+
+void Incident::attach(IncidentObserver* observer)
+{
+    observers.push_back(observer);
+}
+
+void Incident::notifyObservers()
+{
+    for(unsigned int i = 0; i < observers.size(); i++)
+    {
+        observers[i]->update(
+            state->getStatus()
+        );
+    }
 }
 
 void Incident::display() const{
     std::cout << "Incident ID: " << incidentId << std::endl;
     std::cout << "Description: " << description << std::endl;
     std::cout << "Location: " << location << std::endl;
-    std::cout << "Status: " << status << std::endl;
+    std::cout << "Status: " << status->getStatus() << std::endl;
 }
 
 Incedent::~Incedent(){
