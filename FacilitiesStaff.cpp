@@ -16,3 +16,8 @@ void FacilitiesStaff::receiveAlert(const std::string& message){
 void FacilitiesStaff::cancelAction(const std::string& location){
     std::cout << "[Facilities] Cancelling facilities response at "<< location << "." << std::endl;
 }
+
+void FacilitiesStaff::update(const std::string& status)
+{
+    std::cout<< "[Facilities] Incident status changed to "<< status << std::endl;
+}
