@@ -16,3 +16,8 @@ void MedicalTeam::receiveAlert(const std::string& message){
 void MedicalTeam::cancelAction(const std::string& location){
     std::cout << "[Medical] Cancelling medical response at "<< location << "." << std::endl;
 }
+
+void MedicalTeam::update(const std::string& status)
+{
+    std::cout<< "[Medical] Incident status changed to "<< status << std::endl;
+}
