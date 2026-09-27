@@ -1,6 +1,9 @@
 #include "IncidentResponseReceiver.h"
 #include "ResponseMediator.h"
 #include "Incident.h"
+#include "ActiveState.h"
+#include "EvacuationState.h"
+#include "CancelledState.h"
 
 #include <iostream>
 
@@ -12,7 +15,7 @@ IncidentResponseReceiver::IncidentResponseReceiver(ResponseMediator* mediator,In
 void IncidentResponseReceiver::dispatch(const std::string& location){
     std::cout << "[Receiver] Processing dispatch request."<< std::endl;
 
-    incident->setStatus("IN PROGRESS");
+    incident->setStatus(new ActiveState());
 
     mediator->dispatchResponse(location);
 }
@@ -20,7 +23,7 @@ void IncidentResponseReceiver::dispatch(const std::string& location){
 void IncidentResponseReceiver::evacuate(const std::string& location){
     std::cout << "[Receiver] Processing evacuation request."<< std::endl;
 
-    incident->setStatus("EVACUATION");
+    incident->setStatus(new EvacuationState());
     mediator->evacuateArea(location);
 }
 
@@ -33,6 +36,6 @@ void IncidentResponseReceiver::cancel(const std::string& location)
 {
     std::cout << "[Receiver] Processing cancellation request."<< std::endl;
 
-    incident->setStatus("CANCELLED");
+    incident->setStatus(new CancelledState);
     mediator->cancelResponse(location);
 }
