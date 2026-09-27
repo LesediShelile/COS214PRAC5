@@ -1,5 +1,5 @@
-#ifndef SECURITY_TEAM_H
-#define SECURITY_TEAM_H
+#ifndef SECURITYTEAM_H
+#define SECURITYTEAM_H
 #include <string>
 #include "IncidentObserver.h"
 

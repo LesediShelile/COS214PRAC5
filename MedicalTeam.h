@@ -1,5 +1,5 @@
-#ifndef MEDICAL_TEAM_H
-#define MEDICAL_TEAM_H
+#ifndef MEDICALTEAM_H
+#define MEDICALTEAM_H
 #include <string>
 #include "IncidentObserver.h"
 

@@ -1,5 +1,5 @@
-#ifndef RESPONSE_MEDIATOR_H
-#define RESPONSE_MEDIATOR_H
+#ifndef RESPONSEMEDIATOR_H
+#define RESPONSEMEDIATOR_H
 #include <string>
 
 class SecurityTeam;

@@ -1,5 +1,5 @@
-#ifndef DISPATCH_COMMAND_H
-#define DISPATCH_COMMAND_H
+#ifndef DISPATCHCOMMAND_H
+#define DISPATCHCOMMAND_H
 #include "Command.h"
 #include <string>
 

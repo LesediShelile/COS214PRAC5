@@ -1,5 +1,5 @@
-#ifndef CANCEL_COMMAND_H
-#define CANCEL_COMMAND_H
+#ifndef CANCELCOMMAND_H
+#define CANCELCOMMAND_H
 #include "Command.h"
 #include <string>
 
