@@ -1,11 +1,14 @@
 #include "Incident.h"
+#include "IncidentState.h"
+#include "IncidentObserver.h"
+#include "ReportedState.h"
 #include <iostream>
 
 Incident::Incident(int id, const std::string& description,const std::string& location){
     this->incidentId = id;
     this->description = description;
     this->location = location;
-    this->status = "REPORTED";
+    this->status = new ReportedState();
 }
 
 int Incident::getIncidentId() const{
@@ -33,4 +36,8 @@ void Incident::display() const{
     std::cout << "Description: " << description << std::endl;
     std::cout << "Location: " << location << std::endl;
     std::cout << "Status: " << status << std::endl;
+}
+
+Incedent::~Incedent(){
+    delete status;
 }
