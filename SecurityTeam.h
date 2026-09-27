@@ -1,10 +1,11 @@
 #ifndef SECURITY_TEAM_H
 #define SECURITY_TEAM_H
 #include <string>
+#include "IncidentObserver.h"
 
 class ResponseMediator;
 
-class SecurityTeam{
+class SecurityTeam : public IncidentObserver{
 private:
     ResponseMediator* mediator;
 
@@ -19,6 +20,8 @@ public:
     void cancelAction(const std::string& location);
 
     void reportStatus(const std::string& status);
+
+    void update(const std::string& status);
 };
 
 #endif
