@@ -1,9 +1,26 @@
 # COS214PRAC5
 
-# Students + student no.s
+# CampusGuard
+Emergency Response Coordination System
+
+## Team Members
 Shanya Nair - u25061845
 Lesedi Shelile -u25110455
 Rochaan Verster - u25045785
+
+## Build (Local)
+make
+ 
+## Run (Local)
+./CampusGuard
+ 
+## Docker Build and Run
+docker compose up --build
+ 
+## Clean
+make clean
+
+
 
 ## General Idea: 
 A system that coordinates a response when there is some sort of emergency. And we can use command for different actions ,e.g dispatch medical team. 
