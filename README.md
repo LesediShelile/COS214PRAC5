@@ -24,8 +24,9 @@ gdb ./CampusGuard
 ```
 #Further gdb instructions: 
 ```
-instr1
-instr2
+break <line number> ->add a break point for gdb
+si -> step to next instruction
+c -> continue to next breakpoint
 ```
 
 ## Docker Build and Run
