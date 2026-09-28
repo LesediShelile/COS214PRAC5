@@ -15,15 +15,23 @@ Incident::~Incident(){
     delete state;
 }
 
-int Incident::getIncidentId() const{
+Incident::~Incident()
+{
+    delete state;
+}
+
+int Incident::getIncidentId() const
+{
     return incidentId;
 }
 
-std::string Incident::getDescription() const{
+std::string Incident::getDescription() const
+{
     return description;
 }
 
-std::string Incident::getLocation() const{
+std::string Incident::getLocation() const
+{
     return location;
 }
 
@@ -33,9 +41,13 @@ std::string Incident::getStatus() const{
 
 bool Incident::isFinal() const{
     return state->isFinal();
+std::string Incident::getStatus() const
+{
+    return state->getStatus();
 }
 
-void Incident::setStatus(IncidentState* newState){
+void Incident::setStatus(IncidentState* newState)
+{
     delete state;
     state = newState;
     notifyObservers();
@@ -48,13 +60,14 @@ void Incident::attach(IncidentObserver* observer)
 
 void Incident::notifyObservers()
 {
-    for(unsigned int i = 0; i < observers.size(); i++)
+    for (unsigned int i = 0; i < observers.size(); i++)
     {
         observers[i]->update(state->getStatus());
     }
 }
 
-void Incident::display() const{
+void Incident::display() const
+{
     std::cout << "Incident ID: " << incidentId << std::endl;
     std::cout << "Description: " << description << std::endl;
     std::cout << "Location: " << location << std::endl;

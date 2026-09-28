@@ -1,5 +1,5 @@
-#ifndef ALERT_COMMAND_H
-#define ALERT_COMMAND_H
+#ifndef ALERTCOMMAND_H
+#define ALERTCOMMAND_H
 #include "Command.h"
 #include <string>
 

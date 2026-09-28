@@ -1,5 +1,5 @@
-#ifndef EVACUATE_COMMAND_H
-#define EVACUATE_COMMAND_H
+#ifndef EVACUATECOMMAND_H
+#define EVACUATECOMMAND_H
 #include "Command.h"
 #include <string>
 

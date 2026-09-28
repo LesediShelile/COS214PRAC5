@@ -1,5 +1,5 @@
-#ifndef COMMAND_INVOKER_H
-#define COMMAND_INVOKER_H
+#ifndef COMMANDINVOKER_H
+#define COMMANDINVOKER_H
 #include "Command.h"
 
 class CommandInvoker{

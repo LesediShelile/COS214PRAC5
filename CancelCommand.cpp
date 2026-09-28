@@ -1,5 +1,7 @@
-#include "CancelCommand.h"
-#include "IncidentResponseReceiver.h"
+#ifndef CANCELCOMMAND_H
+#define CANCELCOMMAND_H
+#include "Command.h"
+#include <string>
 
 CancelCommand::CancelCommand(IncidentResponseReceiver* receiver, const std::string& location){
     this->receiver = receiver;

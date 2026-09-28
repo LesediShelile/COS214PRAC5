@@ -1,5 +1,5 @@
-#ifndef FACILITIES_STAFF_H
-#define FACILITIES_STAFF_H
+#ifndef FACILITIESSTAFF_H
+#define FACILITIESSTAFF_H
 #include <string>
 #include "IncidentObserver.h"
 
