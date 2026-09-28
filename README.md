@@ -25,6 +25,7 @@ gdb ./CampusGuard
 #Further gdb instructions: 
 ```
 instr1
+instr2
 ```
 
 ## Docker Build and Run
