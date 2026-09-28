@@ -4,11 +4,15 @@
 #include "ReportedState.h"
 #include <iostream>
 
-Incident::Incident(int id, const std::string& description,const std::string& location){
+Incident::Incident(int id, const std::string& description, const std::string& location){
     this->incidentId = id;
     this->description = description;
     this->location = location;
-    this->status = new ReportedState();
+    this->state = new ReportedState();
+}
+
+Incident::~Incident(){
+    delete state;
 }
 
 int Incident::getIncidentId() const{
@@ -24,7 +28,11 @@ std::string Incident::getLocation() const{
 }
 
 std::string Incident::getStatus() const{
-    return status->getStatus();
+    return state->getStatus();
+}
+
+bool Incident::isFinal() const{
+    return state->isFinal();
 }
 
 void Incident::setStatus(IncidentState* newState){
@@ -42,9 +50,7 @@ void Incident::notifyObservers()
 {
     for(unsigned int i = 0; i < observers.size(); i++)
     {
-        observers[i]->update(
-            state->getStatus()
-        );
+        observers[i]->update(state->getStatus());
     }
 }
 
@@ -52,9 +58,5 @@ void Incident::display() const{
     std::cout << "Incident ID: " << incidentId << std::endl;
     std::cout << "Description: " << description << std::endl;
     std::cout << "Location: " << location << std::endl;
-    std::cout << "Status: " << status->getStatus() << std::endl;
-}
-
-Incedent::~Incedent(){
-    delete status;
+    std::cout << "Status: " << state->getStatus() << std::endl;
 }
