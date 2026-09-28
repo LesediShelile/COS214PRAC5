@@ -17,6 +17,8 @@ public:
     void evacuate(const std::string& location);
     void alert(const std::string& message);
     void cancel(const std::string& location);
+    void lockdown(const std::string& location);
+    void unlock(const std::string& location);
 };
 
 #endif

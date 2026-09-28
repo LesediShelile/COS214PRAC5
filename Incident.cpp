@@ -4,12 +4,15 @@
 #include "ReportedState.h"
 #include <iostream>
 
-Incident::Incident(int id, const std::string& description, const std::string& location)
-{
+Incident::Incident(int id, const std::string& description, const std::string& location){
     this->incidentId = id;
     this->description = description;
     this->location = location;
     this->state = new ReportedState();
+}
+
+Incident::~Incident(){
+    delete state;
 }
 
 Incident::~Incident()
@@ -32,6 +35,12 @@ std::string Incident::getLocation() const
     return location;
 }
 
+std::string Incident::getStatus() const{
+    return state->getStatus();
+}
+
+bool Incident::isFinal() const{
+    return state->isFinal();
 std::string Incident::getStatus() const
 {
     return state->getStatus();

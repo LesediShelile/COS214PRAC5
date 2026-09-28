@@ -30,10 +30,8 @@ public:
     void attach(IncidentObserver* observer);
     void notifyObservers();
     void display() const;
+    bool isFinal() const;
 
 };
-
-
-
 
 #endif

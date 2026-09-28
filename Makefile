@@ -1,12 +1,18 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11 -Wall -g
 
-SRC = *.cpp
+SRC = $(wildcard *.cpp)
+OBJ = $(SRC:.cpp=.o)
 
 TARGET = CampusGuard
 
-all:
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(TARGET)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGET) *.o

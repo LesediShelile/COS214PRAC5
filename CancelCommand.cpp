@@ -3,16 +3,11 @@
 #include "Command.h"
 #include <string>
 
-class IncidentResponseReceiver;
+CancelCommand::CancelCommand(IncidentResponseReceiver* receiver, const std::string& location){
+    this->receiver = receiver;
+    this->location = location;
+}
 
-class CancelCommand : public Command {
-private:
-    IncidentResponseReceiver* receiver;
-    std::string location;
-
-public:
-    CancelCommand(IncidentResponseReceiver* receiver,const std::string& location);
-    void execute();
-};
-
-#endif
+void CancelCommand::execute(){
+    receiver->cancel(location);
+}
