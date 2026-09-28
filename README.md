@@ -10,12 +10,21 @@ Rochaan Verster - u25045785
 
 ## Build (Local)
 ```
-make
+make all
 ```
 
 ## Run (Local)
 ```
 ./CampusGuard
+```
+
+## Run with GDB
+```
+gdb ./CampusGuard
+```
+#Further gdb instructions: 
+```
+instr1
 ```
 
 ## Docker Build and Run
