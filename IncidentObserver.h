@@ -7,7 +7,7 @@ class IncidentObserver
 {
 public:
     virtual void update(const std::string& status) = 0;
-    virtual ~IncidentObserver() {}
+    virtual ~IncidentObserver();
 };
 
 #endif

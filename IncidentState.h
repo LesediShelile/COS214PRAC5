@@ -7,7 +7,7 @@ class IncidentState
 {
 public:
     virtual std::string getStatus() const = 0;
-    virtual ~IncidentState() {}
+    virtual ~IncidentState();
 };
 
 #endif
