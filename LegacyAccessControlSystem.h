@@ -14,7 +14,6 @@ public:
     void registerZone(const std::string& zoneName, int zoneCode);
 
     int lookupZoneCode(const std::string& zoneName) const;
-d.
     int actuateDoor(int zoneCode, int mode);
 };
 
