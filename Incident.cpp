@@ -15,10 +15,6 @@ Incident::~Incident(){
     delete state;
 }
 
-Incident::~Incident()
-{
-    delete state;
-}
 
 int Incident::getIncidentId() const
 {
@@ -41,10 +37,8 @@ std::string Incident::getStatus() const{
 
 bool Incident::isFinal() const{
     return state->isFinal();
-std::string Incident::getStatus() const
-{
-    return state->getStatus();
 }
+
 
 void Incident::setStatus(IncidentState* newState)
 {
