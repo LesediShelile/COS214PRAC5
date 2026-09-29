@@ -7,9 +7,6 @@
 class AccessControlService;
 class ResponseMediator;
 
-// Domain-facing response component. It talks only to AccessControlService
-// (the target interface) -- it has no idea a legacy system sits behind it.
-// It participates as a Mediator colleague and as an Observer of Incident.
 class AccessControlUnit : public IncidentObserver {
 private:
     AccessControlService* accessService;

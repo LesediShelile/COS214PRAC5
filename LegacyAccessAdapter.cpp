@@ -11,7 +11,6 @@ bool LegacyAccessAdapter::actuate(const std::string& location, int mode, const s
     int result = legacySystem->actuateDoor(zoneCode, mode);
 
     if (result != 0){
-        // Invalid-operation case, handled sensibly rather than ignored.
         std::cout << "[Adapter] Could not " << verb << " '" << location
                    << "' -- unknown to the legacy access system. No action taken."
                    << std::endl;
